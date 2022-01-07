@@ -23,11 +23,11 @@
 # rocPRIM header-only library
 
 # Configure a header file to pass the rocPRIM version
-configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/include/rocprim/rocprim_version.hpp.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/include/rocprim/rocprim_version.hpp"
-  @ONLY
-)
+# configure_file(
+  # "${CMAKE_CURRENT_SOURCE_DIR}/include/rocprim/rocprim_version.hpp.in"
+  # "${CMAKE_CURRENT_BINARY_DIR}/include/rocprim/rocprim_version.hpp"
+  # @ONLY
+# )
 
 # Only header target, does not include dependencies
 add_library(rocprim INTERFACE)
