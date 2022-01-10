@@ -111,15 +111,12 @@ function(add_hip_test TEST_NAME TEST_SOURCES)
     foreach( file_i ${third_party_dlls})
       add_custom_command( TARGET ${TEST_TARGET} POST_BUILD COMMAND ${CMAKE_COMMAND} ARGS -E copy_if_different ${file_i} ${PROJECT_BINARY_DIR}/test )
     endforeach( file_i )
-  endif()   
+  endif()
 endfunction()
 
 # ****************************************************************************
 # Tests
 # ****************************************************************************
-
-# HIP tests without using rocPRIM
-add_hip_test("hip.device_api" test_hip_api.cpp)
 
 # rocPRIM test
 add_subdirectory(rocprim)
