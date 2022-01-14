@@ -114,4 +114,5 @@ endfunction()
 # ****************************************************************************
 
 # HIP basic test, which also checks if there are no linkage problems when there are multiple sources
+add_rocprim_test("rocprim.block_sort" test_block_sort.cpp)
 add_rocprim_test("rocprim.device_radix_sort" test_device_radix_sort.cpp)
